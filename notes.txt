@@ -1,0 +1,51 @@
+1. Traditional Spider
+--------------------
+Purpose: The traditional spider is used to crawl a web application by following the links it finds to discover all the available pages and resources.
+
+How it works: It works by starting from a base URL, then systematically visiting each link it finds on the pages (like <a> tags) to build a list of all reachable pages. This helps security testers ensure that all parts of the web application are scanned for vulnerabilities.
+
+Limitations:
+It may not detect content loaded dynamically (e.g., via JavaScript).
+It primarily focuses on static links, so it may not handle applications with modern client-side frameworks (like React, Angular).
+
+Use case: It's suitable for discovering all accessible pages of a traditional web application where most of the content is delivered via standard HTTP responses.
+
+2. AJAX Spider
+--------------------
+Purpose: The AJAX Spider is specifically designed to crawl modern web applications that load content dynamically via JavaScript (using techniques like AJAX).
+
+How it works: It behaves more like a real user interacting with the web page. Instead of just following static links, the AJAX Spider executes JavaScript to trigger dynamic actions (like buttons, form submissions, or page transitions) to discover additional resources and pages that traditional spiders might miss.
+
+Limitations:
+It's slower than the traditional spider because it must render and interact with the page.
+It may miss links or actions hidden behind complex JavaScript or user actions.
+
+Use case: Ideal for Single Page Applications (SPA) and web applications that rely heavily on JavaScript to load content dynamically.
+
+3. Passive Scan
+------------------
+Purpose: A passive scan involves observing traffic between the browser and the web server without altering the requests or responses. It is non-intrusive and does not interact with the application directly.
+
+How it works: The passive scanner watches HTTP requests and responses passively as the user or automation tools interact with the web app. It looks for potential vulnerabilities (like missing security headers, information leakage, etc.) without sending any additional traffic or making any changes to the server.
+
+Limitations:
+It cannot discover vulnerabilities that require active probing or sending specific payloads to test for issues like SQL injection, XSS, etc.
+It only identifies weaknesses based on what is already exposed in the traffic.
+
+Use case: Useful in non-intrusive testing scenarios, where you want to detect issues without triggering alerts or potentially causing harm to the web application.
+
+4. Active Scan
+------------------
+Purpose: The active scan is the most aggressive type of scanning where the tool actively sends attack payloads to the web application to test for vulnerabilities.
+
+How it works: The active scanner makes a series of requests to the server, injecting different types of payloads to test for known vulnerabilities, such as:
+SQL injection
+Cross-site scripting (XSS)
+Directory traversal
+File inclusion, etc. It tests the application by manipulating inputs and sending various attack scenarios.
+
+Limitations:
+Active scanning can be disruptive and may cause issues such as server slowdowns, crashes, or false positives.
+It requires more time and processing power compared to passive scanning.
+
+Use case: Used when you want to actively test the web application for vulnerabilities and are ready for intrusive testing. Best suited for dedicated security testing environments.
