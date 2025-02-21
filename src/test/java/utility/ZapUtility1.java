@@ -18,7 +18,7 @@ public class ZapUtility1 {
 
 	private static final String zapAddress = "127.0.0.1";
 	private static final int zapPort = 8080;
-	private static final String apiKey = "61vp52n7575ip2qk3f3t4mrtg3";
+	private static final String apiKey = "13o486bqflpks3lfp5ke6a7qor";
 
 	static {
 		clientApi = new ClientApi(zapAddress, zapPort, apiKey);
