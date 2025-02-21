@@ -8,10 +8,16 @@ This repository contains an automated security testing framework using **OWASP Z
 
 ## Features 🚀
 ✅ **Traditional Spider**: Crawls through the web application’s static pages to discover all accessible resources.
+
 ✅ **AJAX Spider**: Crawls web applications built with modern frameworks (e.g., Angular, React) to discover dynamic pages loaded via JavaScript.
-✅ **Passive Scan**: Passively monitors the web traffic between the browser and server to detect potential security issues without actively interacting with the application.
+
+✅ **Passive Scan**: Passively monitors the web traffic between the browser and server to detect potential security issues without 
+    actively interacting with the application.
+
 ✅ **Active Scan**: Actively probes the web application with attack payloads to identify vulnerabilities like **SQL Injection, XSS, and others**.
+
 ✅ **ZAP Reports**: Automatically generates security reports (**HTML format**) after scans are completed.
+
 ✅ **Clean Scan Tree**: Clears the ZAP scan tree after each test execution to ensure a fresh state for subsequent tests.
 
 ---
